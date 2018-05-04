@@ -2,13 +2,17 @@
  * Created by WINDOWS 8.1 on 30/04/2018.
  */
 public class Series {
-        public void pares(int n) {
-            for (int i = 1; i <= n * 2; i++) {
-                if (i % 2 == 0) {
-                    System.out.println(i);
+
+    public void Pares(int n) {
+        int [] a = new int[n];
+        for (int i = 1; i <= n * 2; i++) {
+            for(int j=0; j<=n-1;j++) {
+            if (i % 2 == 0) {
+                    a[j] = i;
                 }
             }
         }
+    }
 
 
         public int fibonacci(int n){
@@ -21,24 +25,23 @@ public class Series {
             }
         }
 
-        public void primos(int n) {
-            for (int i = 1; i <= n; i++) {
-                if (isPrimo(i)) {
-                    System.out.println(i);
+        public static void numerosPrimos(int n){
+            int [] v = new int[n];
+            int b=1;
+            for(int i=0;i<v.length;i++){
+                while(i!=n){
+                    if(b%2==1){
+                        v[i]=b;
+                        i++;
+                        b++;
+                    }else{
+                        b++;
+                    }
                 }
             }
-        }
-
-        public boolean isPrimo(int n){
-            int aux;
-            for(int c=2;c<n;c++)
-            {
-                aux=n%c;
-                if(aux==0)
-                return false;
+            for(int i=0;i<v.length;i++){
+                System.out.print(""+v);
             }
-            return true;
         }
-
 }
 
