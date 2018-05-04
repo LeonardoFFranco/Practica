@@ -3,15 +3,17 @@
  */
 public class Series {
 
-    public void Pares(int n) {
+    public static int[] pares(int n) {
         int [] a = new int[n];
+        int j=0;
         for (int i = 1; i <= n * 2; i++) {
-            for(int j=0; j<=n-1;j++) {
             if (i % 2 == 0) {
-                    a[j] = i;
-                }
+                a[j] = i;
+                j++;
             }
         }
+
+        return a;
     }
 
 
